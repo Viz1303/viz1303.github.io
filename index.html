@@ -632,8 +632,8 @@
       background: var(--ink);
       color: var(--paper);
       box-shadow: var(--shadow);
-      transform-style: preserve-3d;
-      transition: transform 260ms var(--ease), filter 260ms var(--ease);
+      transition: filter 260ms var(--ease), box-shadow 260ms var(--ease);
+      will-change: transform;
     }
 
     .case-card:nth-child(2n) { background: var(--navy); }
@@ -653,6 +653,7 @@
     }
 
     .case-card > * { position: relative; z-index: 2; }
+    .case-card:hover { box-shadow: 0 36px 110px rgba(8, 17, 31, .26); }
     .case-meta {
       display: flex;
       justify-content: space-between;
@@ -940,7 +941,12 @@
       .hero-grid, .statement, .approach-grid, .experience-grid { grid-template-columns: 1fr; }
       .hero-grid { align-items: center; }
       .skills-grid { grid-template-columns: repeat(2, 1fr); }
-      .case-card { width: min(86vw, 560px); }
+      .case-stage { min-height: auto; overflow: visible; }
+      .case-pin {
+        min-height: auto;
+        display: block;
+        padding: calc(var(--nav-h) + 34px) 0 70px;
+      }
       .case-heading {
         position: relative;
         left: auto;
@@ -953,7 +959,21 @@
       }
       .case-heading:hover { transform: none; }
       .case-heading .eyebrow::before { display: block; }
-      .case-track { padding-left: 22px; }
+      .horizontal-wrap {
+        width: min(var(--max), calc(100% - 44px));
+        margin: 0 auto;
+        overflow: visible;
+      }
+      .case-track {
+        display: grid;
+        width: 100%;
+        padding: 0;
+        gap: 18px;
+      }
+      .case-card {
+        width: 100%;
+        min-height: auto;
+      }
     }
 
     @media (max-width: 680px) {
@@ -962,7 +982,7 @@
       .loader-bottom, .xp-head, .footer-inner { flex-direction: column; }
       .mega-title { font-size: clamp(4rem, 22vw, 6rem); }
       .proof-grid, .skills-grid { grid-template-columns: 1fr; }
-      .case-card { width: calc(100vw - 34px); min-height: 560px; padding: 22px; }
+      .case-card { padding: 22px; }
       .case-card h3 { font-size: 2.35rem; }
       .btn { width: 100%; }
       .hero-actions, .contact-actions { width: 100%; }
@@ -1094,7 +1114,7 @@
         </div>
         <div class="horizontal-wrap">
           <div class="case-track" id="caseTrack">
-            <article class="case-card tilt-card">
+            <article class="case-card">
               <div class="case-meta"><span>01</span><span>Funnel economics</span></div>
               <h3>Recovered checkout revenue opportunities</h3>
               <p>Diagnosed drop-off by funnel stage and customer segment to prioritize conversion fixes with measurable upside.</p>
@@ -1105,7 +1125,7 @@
               <div class="case-footer"><div class="tag-row"><span class="tag">Python</span><span class="tag">Funnel</span><span class="tag">Revenue</span></div><a class="case-link" href="https://github.com/Viz1303/Checkout-Funnel-Analysis" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
             </article>
 
-            <article class="case-card tilt-card">
+            <article class="case-card">
               <div class="case-meta"><span>02</span><span>Experimentation</span></div>
               <h3>Built a fintech CTA decision engine</h3>
               <p>Converted A/B test outputs into launch, iterate or hold decisions using confidence and business impact thresholds.</p>
@@ -1116,7 +1136,7 @@
               <div class="case-footer"><div class="tag-row"><span class="tag">A/B Testing</span><span class="tag">Stats</span><span class="tag">Streamlit</span></div><a class="case-link" href="https://github.com/Viz1303/AB_Testing_Fintech_CTA" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
             </article>
 
-            <article class="case-card tilt-card">
+            <article class="case-card">
               <div class="case-meta"><span>03</span><span>Retention</span></div>
               <h3>Prioritized churn drivers by revenue risk</h3>
               <p>Modeled churn propensity and translated feature importance into targeted retention actions for telecom customers.</p>
@@ -1127,7 +1147,7 @@
               <div class="case-footer"><div class="tag-row"><span class="tag">XGBoost</span><span class="tag">Python</span><span class="tag">Segmentation</span></div><a class="case-link" href="https://github.com/Viz1303/Customer_Churn_Prediction" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
             </article>
 
-            <article class="case-card tilt-card">
+            <article class="case-card">
               <div class="case-meta"><span>04</span><span>Lending ops</span></div>
               <h3>Designed a B2B lending KPI cockpit</h3>
               <p>Structured an executive dashboard for pipeline health, conversion, risk mix and operating review cadence.</p>
@@ -1138,7 +1158,7 @@
               <div class="case-footer"><div class="tag-row"><span class="tag">Plotly</span><span class="tag">Fintech</span><span class="tag">KPI</span></div><a class="case-link" href="https://github.com/Viz1303/LendIQ-Dashboard" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
             </article>
 
-            <article class="case-card tilt-card">
+            <article class="case-card">
               <div class="case-meta"><span>05</span><span>Voice of customer</span></div>
               <h3>Mapped sentiment themes into product priorities</h3>
               <p>Turned review text into quantified product themes so teams can separate recurring issues from isolated complaints.</p>
@@ -1149,7 +1169,7 @@
               <div class="case-footer"><div class="tag-row"><span class="tag">NLP</span><span class="tag">Topic Modeling</span><span class="tag">Streamlit</span></div><a class="case-link" href="https://github.com/Viz1303/Sentiment-Mining-and-Trend-Analysis-of-Amazon-Food-Products-" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
             </article>
 
-            <article class="case-card tilt-card">
+            <article class="case-card">
               <div class="case-meta"><span>06</span><span>Strategy ops</span></div>
               <h3>Framed AI triage for fintech disputes</h3>
               <p>Defined a support-heavy workflow as an AI product concept with triage logic, guardrails and operating metrics.</p>
@@ -1160,7 +1180,7 @@
               <div class="case-footer"><div class="tag-row"><span class="tag">AI Product</span><span class="tag">PRD</span><span class="tag">Fintech</span></div><a class="case-link" href="https://github.com/Viz1303/Razorpay_AI_Dispute_Resolver" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
             </article>
 
-            <article class="case-card tilt-card">
+            <article class="case-card">
               <div class="case-meta"><span>07</span><span>Market risk</span></div>
               <h3>Mapped layoff signals into sector risk insights</h3>
               <p>Converted workforce reduction data into industry-level signals that can inform market exposure and planning decisions.</p>
@@ -1171,7 +1191,7 @@
               <div class="case-footer"><div class="tag-row"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">EDA</span></div><a class="case-link" href="https://github.com/Viz1303/Financial_Implication_of_Layoffs" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
             </article>
 
-            <article class="case-card tilt-card">
+            <article class="case-card">
               <div class="case-meta"><span>08</span><span>Consumer fintech</span></div>
               <h3>Designed savings goals around habit loops</h3>
               <p>Built a product teardown and PRD for a savings-goals experience focused on activation, progress visibility and retention.</p>
@@ -1389,20 +1409,6 @@
             }
           });
         }
-      });
-
-      gsap.utils.toArray('.case-card').forEach((card, index) => {
-        gsap.from(card, {
-          y: index % 2 ? 80 : -80,
-          rotate: index % 2 ? 2 : -2,
-          opacity: .45,
-          scrollTrigger: {
-            trigger: '.case-stage',
-            start: 'top 70%',
-            end: 'bottom 40%',
-            scrub: true
-          }
-        });
       });
 
       gsap.to('.skill-marquee span', {
