@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vishal Arasu | Product, Strategy &amp; Operations Analyst</title>
-  <meta name="description" content="Kinetic portfolio of Vishal Arasu, a Product, Strategy and Operations Analyst focused on growth systems, business analytics, operational strategy and decision intelligence." />
-  <meta property="og:title" content="Vishal Arasu | Product, Strategy &amp; Operations Analyst" />
-  <meta property="og:description" content="Premium analyst portfolio for product analytics, business operations, strategy operations and growth roles." />
+  <title>Vishal Arasu | Product &amp; Operations — I build the systems I run</title>
+  <meta name="description" content="Portfolio of Vishal Arasu — Product &amp; Operations, I build the systems I run. Featuring a production Transport Management System built solo with AI-assisted development, plus product and analytics case studies." />
+  <meta property="og:title" content="Vishal Arasu | Product &amp; Operations — I build the systems I run" />
+  <meta property="og:description" content="Product &amp; Operations — I build the systems I run. Portfolio featuring a self-built production TMS and product/analytics case studies." />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -727,6 +727,84 @@
       white-space: nowrap;
     }
 
+    .case-link-static {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: rgba(255,255,255,.52);
+      cursor: default;
+    }
+
+    .case-card.featured {
+      width: min(88vw, 760px);
+      min-height: 560px;
+      border: 1px solid rgba(200,255,61,.4);
+      background: linear-gradient(160deg, var(--ink) 0%, #14263f 60%, #10331f 100%);
+    }
+
+    .tag-featured {
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    .case-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 26px;
+    }
+
+    .filter-btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.5);
+      color: var(--ink);
+      font-size: .82rem;
+      font-weight: 850;
+      letter-spacing: .02em;
+      cursor: pointer;
+      transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+
+    .filter-btn:hover { transform: translateY(-2px); }
+    .filter-btn.is-active { background: var(--ink); color: var(--lime); border-color: var(--ink); }
+
+    .is-hidden-card { display: none !important; }
+
+    .additional-work {
+      padding: 50px 0 70px;
+      background: var(--paper);
+      color: var(--ink);
+      border-top: 1px solid var(--line);
+    }
+
+    .additional-work .eyebrow { color: var(--navy); }
+
+    .add-work-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .add-work-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.55);
+      font-weight: 800;
+      font-size: .92rem;
+      transition: transform 180ms var(--ease), background 180ms var(--ease);
+    }
+
+    .add-work-item:hover { transform: translateY(-3px); background: rgba(255,255,255,.85); }
+    .add-work-item i { color: var(--navy); font-size: .85rem; }
+
     .approach {
       color: var(--ink);
       background: var(--lime);
@@ -852,8 +930,59 @@
 
     .xp h3 { font-size: 1.04rem; letter-spacing: -.03em; }
     .xp strong { display: block; margin-top: 4px; color: var(--navy); font-size: .88rem; }
+    .xp-company-desc { display: block; margin-top: 3px; color: var(--muted); font-size: .78rem; font-weight: 650; }
     .xp time { color: var(--muted); font-size: .78rem; font-weight: 850; white-space: nowrap; }
     .xp p { color: #536075; font-size: .92rem; font-weight: 650; line-height: 1.45; }
+
+    .volunteering {
+      padding: 50px 0 70px;
+      background: var(--paper);
+      color: var(--ink);
+      border-top: 1px solid var(--line);
+    }
+
+    .pub-section {
+      padding: 60px 0;
+      background: var(--paper);
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pub-section .eyebrow { color: var(--navy); }
+
+    .pub-section h2 {
+      margin-top: 10px;
+      max-width: 640px;
+      font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+      line-height: 1.08;
+      letter-spacing: -.03em;
+      font-weight: 900;
+      text-transform: none;
+    }
+
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .pub-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255,255,255,.6);
+      box-shadow: 0 18px 40px rgba(8,17,31,.06);
+      transition: transform 180ms var(--ease), background 180ms var(--ease);
+    }
+
+    .pub-item:hover { transform: translateY(-4px); background: rgba(255,255,255,.9); }
+    .pub-item i { margin-top: 3px; color: var(--navy); font-size: 1.05rem; }
+    .pub-item b { display: block; letter-spacing: -.02em; }
+    .pub-item span { display: block; margin-top: 6px; color: #536075; font-size: .88rem; font-weight: 650; }
 
     .edu-card {
       padding: 28px;
@@ -974,6 +1103,12 @@
         width: 100%;
         min-height: auto;
       }
+      .case-card.featured {
+        width: 100%;
+        min-height: auto;
+      }
+      .case-filters { justify-content: center; }
+      .add-work-list, .pub-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 680px) {
@@ -1004,12 +1139,12 @@
 <body>
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader-inner">
-      <div class="loader-kicker">Analyst portfolio loading</div>
+      <div class="loader-kicker">Product &amp; operations portfolio loading</div>
       <div class="loader-title">Vishal<br>Arasu</div>
       <div class="loader-bottom">
-        <span>Product analytics</span>
-        <span>Strategy operations</span>
-        <span>Growth systems</span>
+        <span>Production systems</span>
+        <span>AI-assisted builds</span>
+        <span>Decision analytics</span>
       </div>
       <div class="loader-line"><span></span></div>
     </div>
@@ -1022,6 +1157,7 @@
     <a href="#case-studies" aria-label="Cases"></a>
     <a href="#approach" aria-label="Approach"></a>
     <a href="#skills" aria-label="Skills"></a>
+    <a href="#publications" aria-label="Publications"></a>
     <a href="#experience" aria-label="Experience"></a>
     <a href="#contact" aria-label="Contact"></a>
   </div>
@@ -1037,7 +1173,7 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
-      <a class="nav-cta" href="Resume_India.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Resume</a>
+      <a class="nav-cta" href="Vishal_Arasu_Resume.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Resume</a>
       <button class="menu" type="button" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     </div>
   </nav>
@@ -1047,23 +1183,24 @@
     <a href="#case-studies">Case Studies</a>
     <a href="#approach">Approach</a>
     <a href="#skills">Skills</a>
+    <a href="#publications">Publications</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
-    <a href="Resume_India.pdf" target="_blank" rel="noopener">View Resume</a>
+    <a href="Vishal_Arasu_Resume.pdf" target="_blank" rel="noopener">View Resume</a>
   </div>
 
   <main>
     <section class="panel hero" id="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow reveal">Product, Strategy &amp; Operations Analyst</div>
+          <div class="eyebrow reveal">Product &amp; Operations — I build the systems I run</div>
           <h1 class="mega-title">
             <span class="line-mask"><span>Vishal</span></span>
             <span class="line-mask"><span>Arasu</span></span>
           </h1>
-          <p class="hero-copy reveal">Focused on product analytics, logistics strategy, funnel optimization and decision intelligence.</p>
+          <p class="hero-copy reveal">I build and run product and operations systems — from a production logistics platform to the analytics behind the decisions.</p>
           <div class="hero-actions reveal">
-            <a class="btn btn-lime" href="Resume_India.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> View Resume</a>
+            <a class="btn btn-lime" href="Vishal_Arasu_Resume.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> View Resume</a>
             <a class="btn btn-light" href="#case-studies"><i class="fa-solid fa-arrow-down-long"></i> View Case Studies</a>
             <a class="btn btn-light" href="https://www.linkedin.com/in/vishal-arasu-dataanalyst/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
           </div>
@@ -1072,9 +1209,10 @@
           <div class="mini-label">Decision cockpit</div>
           <div class="metric-stack">
             <div class="metric"><b>3+</b><span>Years across product analytics, logistics strategy, healthcare and operations</span></div>
+            <div class="metric"><b>27%</b><span>Data accuracy improvement after launching a self-built TMS at Garuda Glide</span></div>
+            <div class="metric"><b>13</b><span>Users onboarded across 4 branches on a production TMS I built solo</span></div>
             <div class="metric"><b>+33%</b><span>Email open-rate lift from experimentation work at Fidelity</span></div>
             <div class="metric"><b>-75%</b><span>Dashboard load-time reduction through SQL and Snowflake optimization</span></div>
-            <div class="metric"><b>TMS</b><span>Strategy and product lead for logistics workflow integration at Garuda Glide</span></div>
           </div>
         </aside>
       </div>
@@ -1112,65 +1250,28 @@
           <div class="eyebrow reveal">Selected case studies</div>
           <h2 class="section-title reveal">Business problems, not tutorial projects.</h2>
         </div>
+        <div class="container case-filters reveal" role="tablist" aria-label="Filter case studies">
+          <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="product">Product</button>
+          <button type="button" class="filter-btn" data-filter="analytics">Analytics</button>
+        </div>
         <div class="horizontal-wrap">
           <div class="case-track" id="caseTrack">
-            <article class="case-card">
-              <div class="case-meta"><span>01</span><span>Funnel economics</span></div>
-              <h3>Recovered checkout revenue opportunities</h3>
-              <p>Diagnosed drop-off by funnel stage and customer segment to prioritize conversion fixes with measurable upside.</p>
+            <article class="case-card featured" data-category="product">
+              <div class="case-meta"><span>01</span><span>Product build</span></div>
+              <h3>Built and shipped a production TMS for a multi-client 3PL</h3>
+              <p>Designed, built and deployed a Transport Management System end to end with no prior engineering background, using AI-assisted development. Took it from concept to production across 4 branches and 13 users.</p>
               <div class="case-points">
-                <div><b>Problem:</b> Healthy aggregate conversion masked high-value leakage points.</div>
-                <div><b>Recommendation:</b> Run experiments on the highest-loss checkout steps before broad UX changes.</div>
+                <div><b>Problem:</b> A 29-client logistics operation ran on manual data entry and spreadsheets, creating billing errors and no shared view of job or revenue data.</div>
+                <div><b>Approach:</b> Scoped requirements from live operations, built a role-based system (staff / admin / partner) with job entry, invoicing, vendor billing and performance reporting, then ran phased branch-by-branch rollout.</div>
+                <div><b>Results:</b> Eliminated ~3 hours of manual data entry daily; improved data accuracy 27% post-launch; caught a billing error worth Rs 1.24L in a single month; onboarded 13 employees across 4 branches with under 2 weeks per branch and no disruption to operations.</div>
+                <div><b>Insight:</b> Ship to one branch, prove the workflow, then scale — phased rollout beat a big-bang launch.</div>
               </div>
-              <div class="case-footer"><div class="tag-row"><span class="tag">Python</span><span class="tag">Funnel</span><span class="tag">Revenue</span></div><a class="case-link" href="https://github.com/Viz1303/Checkout-Funnel-Analysis" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
+              <div class="case-footer"><div class="tag-row"><span class="tag tag-featured">Centerpiece build</span><span class="tag">Product Build</span><span class="tag">AI-Assisted Development</span><span class="tag">React</span><span class="tag">Cloudflare</span><span class="tag">Logistics</span></div><span class="case-link case-link-static"><i class="fa-solid fa-lock"></i> Proprietary — internal system</span></div>
             </article>
 
-            <article class="case-card">
-              <div class="case-meta"><span>02</span><span>Experimentation</span></div>
-              <h3>Built a fintech CTA decision engine</h3>
-              <p>Converted A/B test outputs into launch, iterate or hold decisions using confidence and business impact thresholds.</p>
-              <div class="case-points">
-                <div><b>Problem:</b> Growth teams can overreact to noisy lifts.</div>
-                <div><b>Recommendation:</b> Combine statistical confidence with minimum detectable impact before shipping.</div>
-              </div>
-              <div class="case-footer"><div class="tag-row"><span class="tag">A/B Testing</span><span class="tag">Stats</span><span class="tag">Streamlit</span></div><a class="case-link" href="https://github.com/Viz1303/AB_Testing_Fintech_CTA" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
-            </article>
-
-            <article class="case-card">
-              <div class="case-meta"><span>03</span><span>Retention</span></div>
-              <h3>Prioritized churn drivers by revenue risk</h3>
-              <p>Modeled churn propensity and translated feature importance into targeted retention actions for telecom customers.</p>
-              <div class="case-points">
-                <div><b>Problem:</b> Churn creates recurring revenue leakage and weakens LTV.</div>
-                <div><b>Recommendation:</b> Target high-risk plan and contract cohorts with proactive save offers.</div>
-              </div>
-              <div class="case-footer"><div class="tag-row"><span class="tag">XGBoost</span><span class="tag">Python</span><span class="tag">Segmentation</span></div><a class="case-link" href="https://github.com/Viz1303/Customer_Churn_Prediction" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
-            </article>
-
-            <article class="case-card">
-              <div class="case-meta"><span>04</span><span>Lending ops</span></div>
-              <h3>Designed a B2B lending KPI cockpit</h3>
-              <p>Structured an executive dashboard for pipeline health, conversion, risk mix and operating review cadence.</p>
-              <div class="case-points">
-                <div><b>Problem:</b> Lending teams need fast visibility across growth, risk and operations.</div>
-                <div><b>Recommendation:</b> Use weekly KPI reviews to catch bottlenecks before they compound.</div>
-              </div>
-              <div class="case-footer"><div class="tag-row"><span class="tag">Plotly</span><span class="tag">Fintech</span><span class="tag">KPI</span></div><a class="case-link" href="https://github.com/Viz1303/LendIQ-Dashboard" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
-            </article>
-
-            <article class="case-card">
-              <div class="case-meta"><span>05</span><span>Voice of customer</span></div>
-              <h3>Mapped sentiment themes into product priorities</h3>
-              <p>Turned review text into quantified product themes so teams can separate recurring issues from isolated complaints.</p>
-              <div class="case-points">
-                <div><b>Problem:</b> Feedback is often read anecdotally instead of prioritized systematically.</div>
-                <div><b>Recommendation:</b> Prioritize themes with high negative sentiment density.</div>
-              </div>
-              <div class="case-footer"><div class="tag-row"><span class="tag">NLP</span><span class="tag">Topic Modeling</span><span class="tag">Streamlit</span></div><a class="case-link" href="https://github.com/Viz1303/Sentiment-Mining-and-Trend-Analysis-of-Amazon-Food-Products-" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
-            </article>
-
-            <article class="case-card">
-              <div class="case-meta"><span>06</span><span>Strategy ops</span></div>
+            <article class="case-card" data-category="product">
+              <div class="case-meta"><span>02</span><span>Strategy ops</span></div>
               <h3>Framed AI triage for fintech disputes</h3>
               <p>Defined a support-heavy workflow as an AI product concept with triage logic, guardrails and operating metrics.</p>
               <div class="case-points">
@@ -1180,19 +1281,8 @@
               <div class="case-footer"><div class="tag-row"><span class="tag">AI Product</span><span class="tag">PRD</span><span class="tag">Fintech</span></div><a class="case-link" href="https://github.com/Viz1303/Razorpay_AI_Dispute_Resolver" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
             </article>
 
-            <article class="case-card">
-              <div class="case-meta"><span>07</span><span>Market risk</span></div>
-              <h3>Mapped layoff signals into sector risk insights</h3>
-              <p>Converted workforce reduction data into industry-level signals that can inform market exposure and planning decisions.</p>
-              <div class="case-points">
-                <div><b>Problem:</b> Layoff volume is noisy without industry, geography and timing context.</div>
-                <div><b>Recommendation:</b> Track sector-level exposure before committing go-to-market or partnership resources.</div>
-              </div>
-              <div class="case-footer"><div class="tag-row"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">EDA</span></div><a class="case-link" href="https://github.com/Viz1303/Financial_Implication_of_Layoffs" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
-            </article>
-
-            <article class="case-card">
-              <div class="case-meta"><span>08</span><span>Consumer fintech</span></div>
+            <article class="case-card" data-category="product">
+              <div class="case-meta"><span>03</span><span>Consumer fintech</span></div>
               <h3>Designed savings goals around habit loops</h3>
               <p>Built a product teardown and PRD for a savings-goals experience focused on activation, progress visibility and retention.</p>
               <div class="case-points">
@@ -1201,7 +1291,41 @@
               </div>
               <div class="case-footer"><div class="tag-row"><span class="tag">PRD</span><span class="tag">UX</span><span class="tag">Fintech</span></div><a class="case-link" href="https://github.com/Viz1303/PhonePe-SavingsGoal-PRD" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
             </article>
+
+            <article class="case-card" data-category="analytics">
+              <div class="case-meta"><span>04</span><span>Funnel economics</span></div>
+              <h3>Recovered checkout revenue opportunities</h3>
+              <p>Diagnosed drop-off by funnel stage and customer segment to prioritize conversion fixes with measurable upside.</p>
+              <div class="case-points">
+                <div><b>Problem:</b> Healthy aggregate conversion masked high-value leakage points.</div>
+                <div><b>Recommendation:</b> Run experiments on the highest-loss checkout steps before broad UX changes.</div>
+              </div>
+              <div class="case-footer"><div class="tag-row"><span class="tag">Python</span><span class="tag">Funnel</span><span class="tag">Revenue</span></div><a class="case-link" href="https://github.com/Viz1303/Checkout-Funnel-Analysis" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+
+            <article class="case-card" data-category="analytics">
+              <div class="case-meta"><span>05</span><span>Lending ops</span></div>
+              <h3>Designed a B2B lending KPI cockpit</h3>
+              <p>Structured an executive dashboard for pipeline health, conversion, risk mix and operating review cadence.</p>
+              <div class="case-points">
+                <div><b>Problem:</b> Lending teams need fast visibility across growth, risk and operations.</div>
+                <div><b>Recommendation:</b> Use weekly KPI reviews to catch bottlenecks before they compound.</div>
+              </div>
+              <div class="case-footer"><div class="tag-row"><span class="tag">Plotly</span><span class="tag">Fintech</span><span class="tag">KPI</span></div><a class="case-link" href="https://github.com/Viz1303/LendIQ-Dashboard" target="_blank" rel="noopener">Open <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="additional-work" id="additional-work">
+      <div class="container">
+        <div class="eyebrow reveal">Additional analytics work</div>
+        <div class="add-work-list">
+          <a class="add-work-item reveal" href="https://github.com/Viz1303/Customer_Churn_Prediction" target="_blank" rel="noopener"><span>Customer Churn Prediction</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a class="add-work-item reveal" href="https://github.com/Viz1303/Sentiment-Mining-and-Trend-Analysis-of-Amazon-Food-Products-" target="_blank" rel="noopener"><span>Amazon Sentiment Mining</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a class="add-work-item reveal" href="https://github.com/Viz1303/Financial_Implication_of_Layoffs" target="_blank" rel="noopener"><span>Financial Implications of Layoffs</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a class="add-work-item reveal" href="https://github.com/Viz1303/AB_Testing_Fintech_CTA" target="_blank" rel="noopener"><span>Fintech CTA Decision Engine</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
     </section>
@@ -1236,27 +1360,43 @@
       </div>
     </section>
 
+    <section class="pub-section" id="publications">
+      <div class="container">
+        <div class="eyebrow reveal">Publications</div>
+        <h2 class="reveal">Peer-reviewed research, published on IEEE Xplore.</h2>
+        <div class="pub-grid">
+          <a class="pub-item reveal" href="https://ieeexplore.ieee.org/document/9751826" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i><div><b>Skin Cancer Detection using Deep Learning</b><span>IEEE Xplore Conference Paper</span></div></a>
+          <a class="pub-item reveal" href="https://ieeexplore.ieee.org/abstract/document/9850506" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i><div><b>Machine Learning on Web: Skin Lesion Classification using CNN</b><span>IEEE Xplore Conference Paper</span></div></a>
+        </div>
+      </div>
+    </section>
+
     <section class="panel experience" id="experience">
       <div class="container">
         <div class="eyebrow reveal">Experience &amp; education</div>
-        <h2 class="section-title reveal">Applied across fintech, healthcare, enrichment and operations.</h2>
+        <h2 class="section-title reveal">Applied across fintech, healthcare, logistics and operations.</h2>
         <div class="experience-grid">
           <div class="xp-list">
-            <article class="xp reveal"><div class="xp-head"><div><h3>Strategy &amp; Product Lead</h3><strong>Garuda Glide</strong></div><time>Oct 2025 - Present</time></div><p>Led TMS evaluation and integration, defined requirements, coordinated vendor onboarding and streamlined logistics workflows across dispatch and fulfillment.</p></article>
-            <article class="xp reveal"><div class="xp-head"><div><h3>Strategy Analyst</h3><strong>Garuda Glide</strong></div><time>Feb 2025 - Oct 2025</time></div><p>Produced weekly KPI reports and dashboards for operations leads, surfacing route efficiency, carrier performance and cost variance insights.</p></article>
-            <article class="xp reveal"><div class="xp-head"><div><h3>Product Analytics &amp; Insights Co-op</h3><strong>Fidelity Investments</strong></div><time>Jan 2024 - Jul 2024</time></div><p>Analyzed 500+ behavioral features, supported A/B tests lifting open rate by 33%, and optimized reporting workflows.</p></article>
+            <article class="xp reveal"><div class="xp-head"><div><h3>Product &amp; Operations Lead</h3><strong>Garuda Glide</strong><span class="xp-company-desc">Multi-client 3PL logistics operation — 29 clients, 4 branches, 13 employees</span></div><time>Oct 2025 - Present</time></div><p>Designed and built a proprietary Transport Management System solo using AI-assisted development, taking it from concept to production across 4 branches and 13 users. Own rollout, data integrity and continuous improvement across 29 client accounts shipping through DHL.</p></article>
+            <article class="xp reveal"><div class="xp-head"><div><h3>Strategy Analyst</h3><strong>Garuda Glide</strong><span class="xp-company-desc">Multi-client 3PL logistics operation — 29 clients, 4 branches, 13 employees</span></div><time>Feb 2025 - Oct 2025</time></div><p>Produced weekly KPI reports and dashboards for operations leads, surfacing route efficiency, carrier performance and cost variance insights.</p></article>
+            <article class="xp reveal"><div class="xp-head"><div><h3>Product Analytics &amp; Insights Co-op</h3><strong>Fidelity Investments</strong></div><time>Jan 2024 - Jul 2024</time></div><p>Analyzed 300+ behavioral features, supported A/B tests lifting open rate by 33%, and optimized reporting workflows.</p></article>
             <article class="xp reveal"><div class="xp-head"><div><h3>Customer Insights Analyst</h3><strong>AmalgamRx</strong></div><time>Jan 2022 - Sep 2022</time></div><p>Analyzed patient and provider datasets, then used NLP on feedback to summarize product and engagement themes.</p></article>
             <article class="xp reveal"><div class="xp-head"><div><h3>Operations Analyst</h3><strong>Netlog Express</strong></div><time>Jan 2021 - Dec 2021</time></div><p>Built forecasting and regression analysis across operational spend and reviewed 1,500+ SKUs for leakage drivers.</p></article>
-            <article class="xp reveal"><div class="xp-head"><div><h3>Growth &amp; Revenue Analyst</h3><strong>BrightMind Enrichment Organization</strong></div><time>Jul 2025 - Jan 2026</time></div><p>Built grant tracking datasets and KPI dashboards to support revenue forecasting, funding-channel analysis and partnership strategy.</p></article>
           </div>
           <aside class="edu-card reveal">
             <h3>Education</h3>
             <div class="degree"><b>M.S. Data Analytics Engineering</b><span>Northeastern University, Boston - Dec 2024 - CGPA 3.5/4.0</span></div>
             <div class="degree"><b>B.E. Computer Science</b><span>New Horizon College of Engineering, Bengaluru - Jul 2022 - CGPA 8.88/10.0</span></div>
-            <h3 style="margin-top: 28px;">Publications</h3>
-            <a class="pub" href="https://ieeexplore.ieee.org/document/9751826" target="_blank" rel="noopener"><b>Skin Cancer Detection using Deep Learning</b><span>IEEE Xplore Conference Paper</span></a>
-            <a class="pub" href="https://ieeexplore.ieee.org/abstract/document/9850506" target="_blank" rel="noopener"><b>Machine Learning on Web: Skin Lesion Classification using CNN</b><span>IEEE Xplore Conference Paper</span></a>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="volunteering" id="volunteering">
+      <div class="container">
+        <div class="eyebrow reveal">Volunteering</div>
+        <div class="xp-list">
+          <article class="xp reveal"><div class="xp-head"><div><h3>Growth &amp; Revenue Analyst</h3><strong>BrightMind Enrichment Organization</strong></div><time>Jul 2025 - Jan 2026</time></div><p>Built grant tracking datasets and KPI dashboards to support revenue forecasting, funding-channel analysis and partnership strategy.</p></article>
         </div>
       </div>
     </section>
@@ -1265,12 +1405,12 @@
       <div class="container contact-card">
         <div class="eyebrow reveal">Resume &amp; contact</div>
         <h2 class="reveal">Let's build the next decision system.</h2>
-        <p class="reveal">Open to Product Analyst, Business Analyst, Business Operations, Strategy Operations and Strategy &amp; Growth Analyst roles.</p>
+        <p class="reveal">Open to Product Manager, Product Operations, Technical Program Manager, Supply Chain / Logistics Product Manager and Product Analyst roles.</p>
         <div class="contact-actions reveal">
           <a class="btn btn-lime" href="mailto:vishalarasu1303@gmail.com"><i class="fa-regular fa-envelope"></i> Email</a>
           <a class="btn btn-light" href="https://www.linkedin.com/in/vishal-arasu-dataanalyst/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
           <a class="btn btn-light" href="https://github.com/Viz1303" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a class="btn btn-paper" href="Resume_India.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Resume</a>
+          <a class="btn btn-paper" href="Vishal_Arasu_Resume.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> Resume</a>
         </div>
       </div>
     </section>
@@ -1279,7 +1419,7 @@
   <footer>
     <div class="footer-inner">
       <span>© 2026 Vishal Arasu</span>
-      <span>Product, Strategy &amp; Operations Analyst</span>
+      <span>Product &amp; Operations — I build the systems I run</span>
     </div>
   </footer>
 
@@ -1318,6 +1458,24 @@
         mobileMenu.classList.remove('open');
         menuButton.setAttribute('aria-expanded', 'false');
         menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const caseCards = document.querySelectorAll('.case-card');
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        const filter = btn.dataset.filter;
+        caseCards.forEach((card) => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.classList.toggle('is-hidden-card', !match);
+        });
+        if (window.ScrollTrigger) {
+          requestAnimationFrame(() => window.ScrollTrigger.refresh());
+        }
       });
     });
 
